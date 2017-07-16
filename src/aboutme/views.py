@@ -9,3 +9,11 @@ def index_view(request):
 
 class IndexView(TemplateView):
     template_name = 'base.html'
+
+
+class AboutMeView(TemplateView):
+    template_name = 'aboutme/aboutme.html'
+
+
+class ContastsView(TemplateView):
+    template_name = 'aboutme/contacts.html'
