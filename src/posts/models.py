@@ -13,12 +13,11 @@ class PostModel(models.Model):
         return self.title
 
     @property
-    def images(self):
+    def main_image(self):
         instance = self
-        print(self.id)
         qs = ImageModel.objects.filter(post=self).first()
-        print(qs.image.url)
-        return qs
+        url = qs.image.url
+        return url
 
 
 
