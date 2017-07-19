@@ -13,7 +13,3 @@ class IndexView(TemplateView):
 
 class AboutMeView(TemplateView):
     template_name = 'aboutme/aboutme.html'
-
-
-class ContastsView(TemplateView):
-    template_name = 'aboutme/contacts.html'

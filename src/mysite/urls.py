@@ -24,9 +24,10 @@ from aboutme.views import index_view, IndexView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'^$', index_view, name='main'),
-    url(r'^', include('aboutme.urls')),
-    url(r'^$', IndexView.as_view(), name='main'),
+    url(r'^aboutme/', include('aboutme.urls')),
+    url(r'^contacts/', include('contacts.urls')),
     url(r'^posts/', include('posts.urls')),
+    # url(r'^$', IndexView.as_view(), name='main'),
 ]
 
 

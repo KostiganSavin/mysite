@@ -9,6 +9,10 @@ class PostModel(models.Model):
     available   = models.BooleanField(default=True)
     price       = models.DecimalField(max_digits=5, decimal_places=2)
 
+    def __str__(self):
+        return self.title
+
+
 class ImageModel(models.Model):
     post        = models.ForeignKey(PostModel, on_delete=models.CASCADE)
     image       = models.ImageField(upload_to='images/', #upload_location,
@@ -18,3 +22,6 @@ class ImageModel(models.Model):
                                     width_field = 'width_field')
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
+
+    def __str__(self):
+        return "{}-{}".format(self.post.title, self.id)

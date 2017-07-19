@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>AboutMe Page</title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
     <div class="jumbotron">
       <h1>Обо Мне</h1>
 
       <p>Немного обо мне</p>
 
     </div>
-  </body>
-</html>
+    <div>
+      <img src="{% static '/image/mylogobig.jpg'%}" alt="" class="img-responsive">
+    </div>
+{% endblock %}
