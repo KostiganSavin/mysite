@@ -12,6 +12,15 @@ class PostModel(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def images(self):
+        instance = self
+        print(self.id)
+        qs = ImageModel.objects.filter(post=self).first()
+        print(qs.image.url)
+        return qs
+
+
 
 class ImageModel(models.Model):
     post        = models.ForeignKey(PostModel, on_delete=models.CASCADE)
