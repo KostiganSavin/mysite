@@ -14,8 +14,7 @@ class PostModel(models.Model):
 
     @property
     def main_image(self):
-        instance = self
-        qs = ImageModel.objects.filter(post=self).first()
+        qs = self.imagemodel_set.all().first()
         url = qs.image.url
         return url
 
