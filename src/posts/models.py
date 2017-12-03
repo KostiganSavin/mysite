@@ -32,3 +32,7 @@ class ImageModel(models.Model):
 
     def __str__(self):
         return "{}-{}".format(self.post.title, self.id)
+
+
+class CommentModel(models.Model):
+    pass
